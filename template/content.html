@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+{%load static%}
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title> CONTENT | E-COMMERCE WEBSITE BY EDYODA </title>
+    <script src="{% static 'Javascript\kitfontawesome.js' %}"></script> <!---controls the cart / user icon -->
+    <link href="{% static 'css\googleapis.css' %}" rel="stylesheet">
+    <!-- favicon -->
+    <link rel="icon" href="https://yt3.ggpht.com/a/AGF-l78km1YyNXmF0r3-0CycCA0HLA_i6zYn_8NZEg=s900-c-k-c0xffffffff-no-rj-mo" type="image/gif" sizes="16x16">
+
+    <link rel="stylesheet" href="{% static 'css/content.css'%}">
+
+</head>
+<body>
+    <div id="mainContainer">
+
+        <h1> GasProduct  </h1>
+      
+        <div id="GasProduct">
+            {%for gasp in gasp%} <!--coming from the database-->
+            
+            <div id= 'box'>
+                
+                <img src="{{gasp.gas_image.url}}">
+                    <div id="details">
+                        <h3 id="pols">{{gasp.gas_name}}   </h3>
+                            <h4 class="detail">{{gasp.gas_details}} </h4>
+                                <h2>{{gasp.gas_price}}</h2>
+                                <p><button id="btn_cart" class="btn">Add to Tank</button> </p>
+                    </div>
+            
+                </a>
+
+             </div>
+             {%endfor%}
+        </div>
+
+        <h1> accessories </h1>
+        <div id="accessories">
+            {%for access in acces%} <!--coming from the database-->
+            <div id= 'box'>
+                <img src="{{access.accessory_image.url}}"id='nam'>
+                    <div id="details">
+                        <h3 id="accs">{{access.accessoryname}}   </h3>
+                            <h4>{{access.accessory_details}} </h4>
+                                <h2>{{access.accesory_price}}</h2>
+                     <p><button id="btn_cart">Add to Tank</button></p>
+                    </div>
+            
+                </a>
+             </div> 
+             {%endfor%}
+        </div>
+   
+    </div>
+
+</body>
+</html>
+
+<script src="{%static 'Javascript/contentse.js'%}"></script>
