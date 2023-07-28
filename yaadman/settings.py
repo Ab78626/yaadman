@@ -77,10 +77,11 @@ WSGI_APPLICATION = 'yaadman.wsgi.application'
 DATABASES = {
      'default': {
         'ENGINE': 'django.db.backends.postgresql',
-        'NAME': 'yaadman',
+        'NAME': 'railway',
         'USER': 'postgres',
-        'PASSWORD':'Decordiva',
-        'Host'  : 'localhost'
+        'PASSWORD':'DW2pJLv957dICPPB6iPs',
+        'Host'  : 'containers-us-west-115.railway.app',
+        'Port' : '6003',
     }
 }
 
